@@ -1,0 +1,29 @@
+* "simulator" "HSPICE" 
+* "version" "O-2018.09-SP1-1 linux64"
+* "format" "HSP"
+* "rundate" "17:09:55 11/19/2022 "
+* "netlist" "halfadder_delay.sp "
+* "runtitle" "*half adder"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ a =   0.            
++ b =   0.            
++ cout =  12.3963u       
++ s =  24.2032u       
++ vdd! = 700.0000m       
++ xi0.net013 =  13.2969u       
++ xi0.net017 = 699.9942m       
++ xi0.net055 =   7.1279u       
++ xi0.net056 =  42.2228m       
++ xi0.net07 =  13.3456u       
++ xi0.net09 = 699.9942m       
++ xi0.net14 = 699.9982m       
++ xi0.net20 =   7.1279u       
++ xi0.net22 = 699.9878m       
++ xi0.net30 = 699.9878m       
++ xi0.net35 =  12.1657u       
+***   END: Saved Operating Point ***                     

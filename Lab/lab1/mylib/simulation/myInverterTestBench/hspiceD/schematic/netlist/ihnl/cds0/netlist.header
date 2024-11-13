@@ -1,0 +1,5 @@
+
+** Library name: ADETutorial
+** Cell name: myInverter
+** View name: schematic
+.subckt myInverter a z

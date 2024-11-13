@@ -1,0 +1,43 @@
+* File: inv.pex.netlist
+* Created: Thu Sep 22 11:30:03 2022
+* Program "Calibre xRC"
+* Version "v2016.4_38.25"
+*
+
+.INCLUDE "/home/centos/PDK/FreePDK15/hspice/models/fet.inc"
+.include "inv.pex.netlist.pex"
+.PARAM vdd_val=800m
+.PROBE TRAN
++    V(in)
++    V(out)
+.TRAN 100e-15 100e-12 START=0.0
+
+.TEMP 25.0
+.OPTION
++    ARTIST=2
++    INGOLD=2
++    PARHIER=LOCAL
++    PSF=2
+
+.subckt inv  A GND! VDD! Z
+* 
+* OUT	OUT
+* VDD!	VDD!
+* GND!	GND!
+* IN	IN
+MM0 Z N_A_MM0_g N_GND!_MM0_s GND! NMOS L=2e-08 W=4.8e-08 NFIN=2 ADEJ=6.08e-16
++ ASEJ=6.08e-16 PDEJ=1.68e-07 PSEJ=1.68e-07
+MM1 N_Z_MM1_d N_A_MM0_g N_VDD!_MM1_s VDD! PMOS L=2e-08 W=8.8e-08 NFIN=3
++ ADEJ=9.12e-16 ASEJ=9.12e-16 PDEJ=2.52e-07 PSEJ=2.52e-07
+*
+.include "inv.pex.netlist.INV.pxi"
+*
+.ends
+*
+*
+xinv IN GND VDD OUT inv
+v0 VDD GND DC=0.8
+v1 IN GND PULSE 0 0.8 0 10e-12 10e-12 40e-12 100e-12
+c0 OUT 0 1e-15
+v2 GND 0 DC=0
+.END

@@ -1,0 +1,44 @@
+* File: myInverter.pex.netlist
+* Created: Thu Sep 22 20:20:18 2022
+* Program "Calibre xRC"
+* Version "v2016.4_38.25"
+* 
+.INCLUDE "/home/centos/PDK/FreePDK45/ncsu_basekit/models/hspice/tran_models/models_ss/NMOS_VTL.inc"
+.INCLUDE "/home/centos/PDK/FreePDK45/ncsu_basekit/models/hspice/tran_models/models_ss/PMOS_VTL.inc"
+.include "myInverter.pex.netlist.pex"
+.PARAM vdd_val=800m
+.PROBE TRAN
++    V(in)
++    V(out)
+.TRAN 100e-15 100e-12 START=0.0
+
+.TEMP 25.0
+.OPTION
++    ARTIST=2
++    INGOLD=2
++    PARHIER=LOCAL
++    PSF=2
+
+.subckt myInverter  A GND! VDD! Z
+* 
+* OUT	OUT
+* VDD!	VDD!
+* GND!	GND!
+* IN	IN
+MM0 N_Z_MM0_d N_A_MM0_g N_GND!_MM0_s N_GND!_MM0_b NMOS_VTL L=5e-08 W=9e-08
++ AD=1.62e-14 AS=1.62e-14 PD=5.4e-07 PS=5.4e-07
+MM1 N_Z_MM1_d N_A_MM1_g N_VDD!_MM1_s N_VDD!_MM1_b PMOS_VTL L=5e-08 W=9e-08
++ AD=1.62e-14 AS=1.62e-14 PD=5.4e-07 PS=5.4e-07
+*
+.include "myInverter.pex.netlist.MYINVERTER.pxi"
+
+*
+.ends
+*
+*
+xmyInverter IN GND VDD OUT myInverter
+v0 VDD GND DC=0.8
+v1 IN GND PULSE 0 0.8 0 10e-12 10e-12 40e-12 100e-12
+c0 OUT 0 1e-15
+v2 GND 0 DC=0
+.END

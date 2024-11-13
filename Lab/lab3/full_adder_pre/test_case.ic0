@@ -1,0 +1,35 @@
+* "simulator" "HSPICE" 
+* "version" "O-2018.09-SP1-1 linux64"
+* "format" "HSP"
+* "rundate" "17:23:02 11/19/2022 "
+* "netlist" "fulladder_delay.sp "
+* "runtitle" "*full adder"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ a =   0.            
++ b =   0.            
++ cin =   0.            
++ cout =  12.3970u       
++ s =  12.4053u       
++ vdd! = 700.0000m       
++ xi3.net031 =  16.3675u       
++ xi3.net058 = 699.9942m       
++ xi3.net059 = 699.9942m       
++ xi3.net06 =  16.4161u       
++ xi3.net062 = 699.9981m       
++ xi3.net065 = 699.9904m       
++ xi3.net066 = 699.9812m       
++ xi3.net16 =  28.5836m       
++ xi3.net20 = 699.9987m       
++ xi3.net26 =  42.2227m       
++ xi3.net27 = 699.9965m       
++ xi3.net37 = 521.3958m       
++ xi3.net41 = 699.9998m       
++ xi3.net49 =  57.9537m       
++ xi3.net50 = 699.9723m       
++ xi3.net64 =  16.5112m       
+***   END: Saved Operating Point ***                     

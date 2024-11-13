@@ -1,0 +1,21 @@
+* "simulator" "HSPICE" 
+* "version" "O-2018.09-SP1-1 linux64"
+* "format" "HSP"
+* "rundate" "11:41:45 09/22/2022 "
+* "netlist" "inv.pex.netlist "
+* "runtitle" "* file: inv.pex.netlist"
+* time =  0.000e+00       
+* temperature =  2.500e+01       
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc= 1.000e-12       
+.nodeset
++ in = 0.000e+00       
++ out = 8.000e-01       
++ vdd = 8.000e-01       
++ xinv^n_a_mm0_g = 2.241e-14       
++ xinv^n_gnd!_c_6_n = 3.983e-09       
++ xinv^n_gnd!_mm0_s = 8.681e-09       
++ xinv^n_vdd!_mm1_s = 8.000e-01       
++ xinv^n_z_mm1_d = 8.000e-01       
+***   END: Saved Operating Point ***                     

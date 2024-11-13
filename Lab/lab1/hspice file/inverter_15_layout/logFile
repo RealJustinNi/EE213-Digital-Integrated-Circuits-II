@@ -1,0 +1,32 @@
+header
+"PSFversion" "1.00"
+"simulator" "HSPICE"
+"version" "O-2018.09-SP1-1 linux64"
+"rundate" "11:41:45 09/22/2022 "
+"runtitle" "* file: inv.pex.netlist                                           "
+"runtype" "logFile"
+TYPE
+"analysisInst" STRUCT(
+"analysisType" STRING *
+"dataFile" STRING *
+"format" STRING *
+"parent" STRING *
+"sweepVariable" ARRAY ( * ) STRING *
+"description" STRING * )
+VALUE
+"timeSweep" "analysisInst" ( 
+"Transient Analysis"
+"out.tr0"
+"PSF"
+""
+()
+"Transient Analysis"
+)
+"summary" "analysisInst" ( 
+"Summary Information"
+"out.su0"
+"PSF"
+""
+()
+"Summary Information"
+)

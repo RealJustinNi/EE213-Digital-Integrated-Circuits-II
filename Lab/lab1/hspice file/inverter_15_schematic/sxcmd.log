@@ -1,0 +1,30 @@
+### Custom WaveView ADV log file, revision Q-2020.03-SP2-2 (build Oct 29, ) ###
+### created at 11:23:03 on Thu Sep 22 2022 (Linux AMD64) ###
+### Host Name: 2022-szjcdl-23   User ID: centos   PID: 32267   ###
+wv_start_log
+# (0) running in waveview only mode
+# (0) SW_SX_PERL_LIB defined
+# (0) SW_SX_TCL_LIB defined
+# (0) HOME defined
+wv_move_window {Custom WaveView} {} 0 28
+wv_select_window {Custom WaveView} 
+wv_move_window {Custom WaveView} {} 183 28
+wv_press_tool_button {Custom WaveView} {} {OpenWaveform0} 
+wv_move_window {FileDialog} {} 618 113
+wv_move_window {FileDialog} {} 628 117
+wv_select_dialog {FileDialog} 
+wv_select_list_item {FileDialog} {} {FileList} {output.tr0} 9
+wv_dclick_list_item {FileDialog} {} {FileList} {output.tr0} 9
+wv_expand_tree_item {Custom WaveView} {} {hierview} {D0:output.tr0(0)} {+sep=@}
+wv_select_tree_item {Custom WaveView} {} {hierview} {D0:output.tr0(0)@toplevel(0)} {0} {+sep=@}
+wv_select_tree_item {Custom WaveView} {} {hierview} {D0:output.tr0(0)@toplevel(0)} {0} {+sep=@}
+wv_select_list_item {Custom WaveView} {} {sigview} {out} 4
+wv_dclick_list_item {Custom WaveView} {} {sigview} {out} 4
+wv_select_list_item {Custom WaveView} {} {sigview} {in} 3
+wv_dclick_list_item {Custom WaveView} {} {sigview} {in} 3
+wv_close_window {Custom WaveView} 
+wv_move_window {Confirmation} {} 722 327
+wv_move_window {Confirmation} {} 732 331
+wv_select_dialog {Confirmation} 
+#wv_press_button {Confirmation} {} {Ok} 
+#*WARNING* Can not remove '/home/centos/.cx_hostport/.cx_hostport_2022-szjcdl-23_32267'.

@@ -1,0 +1,6 @@
+** Generated for: hspiceD
+** Generated on: Sep 19 10:05:01 2022
+** Design library name: ADETutorial
+** Design cell name: myInverterTestBench
+** Design view name: schematic
+.GLOBAL vdd!

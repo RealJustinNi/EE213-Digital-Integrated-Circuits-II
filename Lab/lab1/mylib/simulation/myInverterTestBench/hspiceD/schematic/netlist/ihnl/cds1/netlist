@@ -1,0 +1,8 @@
+
+** Library name: ADETutorial
+** Cell name: myInverterTestBench
+** View name: schematic
+v1 in 0 PULSE 0 vdd_val 0 10e-12 10e-12 40e-12 100e-12
+c0 out 0 1e-15
+v0 vdd! 0 DC=vdd_val
+xi4 in out myInverter

@@ -1,0 +1,44 @@
+* "simulator" "HSPICE" 
+* "version" "O-2018.09-SP1-1 linux64"
+* "format" "HSP"
+* "rundate" "20:29:35 09/22/2022 "
+* "netlist" "myInverter.pex.netlist "
+* "runtitle" "* file: myinverter.pex.netlist"
+* time =  0.000e+00       
+* temperature =  2.500e+01       
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc= 1.000e-12       
+.nodeset
++ in = 0.000e+00       
++ out = 8.000e-01       
++ vdd = 8.000e-01       
++ xmyinverter^n_a_c_10_p = 9.540e-09       
++ xmyinverter^n_a_mm0_g = 1.015e-08       
++ xmyinverter^n_a_mm1_g = 1.488e-08       
++ xmyinverter^n_gnd!_c_14_n = 1.914e-09       
++ xmyinverter^n_gnd!_c_18_p = 1.492e-09       
++ xmyinverter^n_gnd!_c_19_p = 6.606e-13       
++ xmyinverter^n_gnd!_mm0_b = 1.444e-12       
++ xmyinverter^n_gnd!_mm0_s = 3.512e-09       
++ xmyinverter^n_vdd!_c_24_n = 8.000e-01       
++ xmyinverter^n_vdd!_c_28_n = 8.000e-01       
++ xmyinverter^n_vdd!_c_29_n = 8.000e-01       
++ xmyinverter^n_vdd!_mm1_b = 8.000e-01       
++ xmyinverter^n_vdd!_mm1_s = 8.000e-01       
++ xmyinverter^n_z_c_38_n = 8.000e-01       
++ xmyinverter^n_z_c_39_n = 8.000e-01       
++ xmyinverter^n_z_c_44_n = 8.000e-01       
++ xmyinverter^n_z_mm0_d = 8.000e-01       
++ xmyinverter^n_z_mm1_d = 8.000e-01       
++ xmyinverter^x_pm_myinverter%a^1 = 9.590e-09       
++ xmyinverter^x_pm_myinverter%a^5 = 9.998e-09       
++ xmyinverter^x_pm_myinverter%gnd!^7 = 1.140e-12       
++ xmyinverter^x_pm_myinverter%gnd!^13 = 6.427e-13       
++ xmyinverter^x_pm_myinverter%gnd!^16 = 1.977e-09       
++ xmyinverter^x_pm_myinverter%vdd!^7 = 8.000e-01       
++ xmyinverter^x_pm_myinverter%vdd!^13 = 8.000e-01       
++ xmyinverter^x_pm_myinverter%vdd!^16 = 8.000e-01       
++ xmyinverter^x_pm_myinverter%z^7 = 8.000e-01       
++ xmyinverter^x_pm_myinverter%z^8 = 8.000e-01       
+***   END: Saved Operating Point ***                     

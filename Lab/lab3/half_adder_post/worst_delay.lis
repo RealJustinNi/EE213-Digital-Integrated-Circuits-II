@@ -1,0 +1,795 @@
+ ****** HSPICE -- O-2018.09-SP1-1 linux64 (Dec 28 2018) ******                  
+  Copyright (c) 1986 - 2022 by Synopsys, Inc. All Rights Reserved.              
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: halfadder_delay.sp                                                
+  Command line options: /home/tools/synopsys/hspice/O-2018.09-SP1-1/hspice/linux64/hspice -i halfadder_delay.sp -o worst_delay
+  Start time: Sat Nov 19 17:15:34 2022
+ lic:  
+ lic: FLEXlm: SDK_11.6.9.6 
+ lic: USER:   centos               HOSTNAME: 2022-szjcdl-23 
+ lic: HOSTID: 005056a66ba9         PID:      17734 
+ lic: Using FLEXlm license file: 
+ lic: 27020@10.15.89.162 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 01-nov-2025/2022.06 
+ lic: 1(in_use)/40(total) FLOATING license(s) on SERVER 27020@10.15.89.162 
+ lic:   
+  **warning** (halfadder_delay.sp:3) runlvl smaller than 5, reset to 5 when accurate turned on
+  **warning** (halfadder.sp:12) Global net name, "gnd", in subckt pin list. The pin will be connected to the local net. Recommend to not use global net names in subckt pin lists.
+
+ **warning**  runlvl smaller than 5, reset to 5 when accurate turned on
+1****** HSPICE -- O-2018.09-SP1-1 linux64 (Dec 28 2018) ******                  
+ ******  
+ *half adder
+
+ ****** circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 xhalfadder.                     halfadder          1.00 
+        2 xhalfadder.x_pm_halfadder%net09.
+                                            pm_halfadder%net09
+                                                                 1.00 
+        3 xhalfadder.x_pm_halfadder%a.    pm_halfadder%a     1.00 
+        4 xhalfadder.x_pm_halfadder%net07.
+                                            pm_halfadder%net07
+                                                                 1.00 
+        5 xhalfadder.x_pm_halfadder%cout. pm_halfadder%cout
+                                                                 1.00 
+        6 xhalfadder.x_pm_halfadder%net14.
+                                            pm_halfadder%net14
+                                                                 1.00 
+        7 xhalfadder.x_pm_halfadder%net22.
+                                            pm_halfadder%net22
+                                                                 1.00 
+        8 xhalfadder.x_pm_halfadder%s.    pm_halfadder%s     1.00 
+        9 xhalfadder.x_pm_halfadder%net30.
+                                            pm_halfadder%net30
+                                                                 1.00 
+       10 xhalfadder.x_pm_halfadder%net013.
+                                            pm_halfadder%net013
+                                                                 1.00 
+       11 xhalfadder.x_pm_halfadder%b.    pm_halfadder%b     1.00 
+       12 xhalfadder.x_pm_halfadder%gnd!. pm_halfadder%gnd!
+                                                                 1.00 
+       13 xhalfadder.x_pm_halfadder%vdd!. pm_halfadder%vdd!
+                                                                 1.00 
+       14 xhalfadder.x_pm_halfadder%net017.
+                                            pm_halfadder%net017
+                                                                 1.00 
+ ******  
+ *half adder
+
+ ****** mos   model parameters tnom=  25.000 temp=  25.000 ******
+ Model file: /home/centos/PDK/FreePDK45/ncsu_basekit/models/hspice/tran_models/models_ss/NMOS_VTL.inc
+ Model line:            3
+ Model Name: nmos_vtl  
+ BSIM4 Model (Level 54)
+    MOBMOD = 0
+    BINUNIT = 1
+    PARAMCHK = 1
+    CAPMOD = 2
+    DIOMOD = 1
+    RDSMOD = 0
+    TRNQSMOD = 0
+    ACNQSMOD = 0
+    RBODYMOD = 1
+    RGATEMOD = 1
+    PERMOD = 1
+    GEOMOD = 1
+    RGEOMOD = 0
+    FNOIMOD = 1
+    TNOIMOD = 0
+    IGCMOD = 1
+    IGBMOD = 1
+    STIMOD = 0
+    VERSION =      4 
+    TOXREF = 1.17e-09 
+    TOXE = 1.17e-09 
+    TOXP =  1e-09 
+    TOXM = 1.17e-09 
+    DTOX = 1.7e-10 
+    EPSROX =    3.9 
+    CDSC =      0 
+    CDSCB =      0 
+    CDSCD =      0 
+    CIT =      0 
+    NFACTOR =    2.1 
+    XJ = 2.05e-08 
+    VSAT = 1.48e+05 
+    A0 =      1 
+    AGS =      0 
+    A1 =      0 
+    A2 =      1 
+    AT = 3.3e+04 
+    KETA =   0.04 
+    NSUB =  6e+16 
+    NDEP = 3.6e+18 
+    NSD =  2e+20 
+    NGATE =  3e+20 
+    GAMMA1 =      0 
+    GAMMA2 =      0 
+    VBX =      0 
+    VBM =     -3 
+    XT = 1.55e-07 
+    K1 =    0.4 
+    KT1 =  -0.11 
+    KT1L =      0 
+    KT2 =  0.022 
+    K2 =      0 
+    K3 =      0 
+    K3B =      0 
+    LPE0 =      0 
+    LPEB =      0 
+    DVTP0 =  1e-10 
+    DVTP1 =    0.1 
+    W0 = 2.5e-06 
+    DVT0 =      1 
+    DVT1 =      2 
+    DVT2 =      0 
+    DVT0W =      0 
+    DVT1W =      0 
+    DVT2W =      0 
+    DROUT =    0.5 
+    DSUB =    0.1 
+    VTH0 =  0.347 
+    EU =   1.67 
+    UA =  6e-10 
+    UA1 = 4.31e-09 
+    UB = 1.2e-18 
+    UB1 = 7.61e-18 
+    UC =      0 
+    UC1 = -5.6e-11 
+    U0 =  0.044 
+    UTE =   -1.5 
+    VOFF =  -0.13 
+    VOFFL =      0 
+    MINV =   0.05 
+    FPROUT =    0.2 
+    PDITS =   0.08 
+    PDITSD =   0.23 
+    PDITSL = 2.3e+06 
+    DELTA =   0.01 
+    RDSW =    155 
+    RDSWMIN =      0 
+    RDWMIN =      0 
+    RSWMIN =      0 
+    RDW =     80 
+    RSW =     80 
+    PRWG =      0 
+    PRWB =      0 
+    PRT =      0 
+    ETA0 =  0.006 
+    ETAB =      0 
+    PCLM =   0.02 
+    PDIBLC1 =  0.001 
+    PDIBLC2 =  0.001 
+    PDIBLCB = -0.005 
+    PSCBE1 = 8.14e+08 
+    PSCBE2 =  1e-07 
+    PVAG =  1e-20 
+    WR =      1 
+    DWG =      0 
+    DWB =      0 
+    XW =      0 
+    XWREF =      0 
+    XL = -2e-08 
+    XLREF = -2e-08 
+    B0 =      0 
+    B1 =      0 
+    ALPHA0 =  0.074 
+    ALPHA1 =  0.005 
+    AGIDL = 0.0002 
+    BGIDL = 2.1e+09 
+    CGIDL = 0.0002 
+    PHIN =      0 
+    EGIDL =    0.8 
+    AIGC =   0.02 
+    BIGC = 0.0027 
+    CIGC =  0.002 
+    AIGSD =   0.02 
+    BIGSD = 0.0027 
+    CIGSD =  0.002 
+    AIGBACC =  0.012 
+    BIGBACC = 0.0028 
+    CIGBACC =  0.002 
+    AIGBINV =  0.014 
+    BIGBINV =  0.004 
+    CIGBINV =  0.004 
+    NIGC =      1 
+    NIGBINV =      3 
+    NIGBACC =      1 
+    NTOX =      1 
+    EIGBINV =    1.1 
+    PIGCD =      1 
+    POXEDGE =      1 
+    XRCRG1 =     12 
+    TNOIA =    1.5 
+    TNOIB =    3.5 
+    NTNOI =      1 
+    XRCRG2 =      5 
+    BETA0 =     30 
+    IJTHDFWD =   0.01 
+    IJTHSFWD =   0.01 
+    IJTHDREV =  0.001 
+    IJTHSREV =  0.001 
+    XJBVD =      1 
+    XJBVS =      1 
+    BVD =     10 
+    BVS =     10 
+    VFB =  -0.55 
+    GBMIN =  1e-10 
+    RBDB =     15 
+    RBPB =      5 
+    RBSB =     15 
+    RBPS =     15 
+    RBPD =     15 
+    CGSL = 2.653e-10 
+    CGDL = 2.653e-10 
+    CKAPPAS =   0.03 
+    CKAPPAD =   0.03 
+    CF = 1.283e-10 
+    CLC =  1e-07 
+    CLE =    0.6 
+    DWC =  5e-09 
+    DLC = 3.225e-09 
+    DLCIG = 3.225e-09 
+    DWJ =      0 
+    VFBCV =     -1 
+    ACDE =      1 
+    MOIN =     15 
+    NOFF =    0.9 
+    VOFFCV =   0.02 
+    DMCG =      0 
+    DMCI =      0 
+    DMDG =      0 
+    DMCGT =      0 
+    XGW =      0 
+    XGL =      0 
+    RSHG =    0.4 
+    NGCON =      1 
+    TCJ =  0.001 
+    TPB =  0.005 
+    TCJSW =  0.001 
+    TPBSW =  0.005 
+    TCJSWG =  0.001 
+    TPBSWG =  0.005 
+    SK0 =      0 
+    SK1 =      0 
+    SK2 =      0 
+    SL =  2e-06 
+    SW =  2e-06 
+    K =      0 
+    TNOM =  300.1 
+    CGSO = 1.1e-10 
+    CGDO = 1.1e-10 
+    CGBO = 2.56e-11 
+    XPART =      0 
+    RSH =      5 
+    JSS = 0.0001 
+    JSWS =  1e-11 
+    JSWGS =  1e-10 
+    PBS =      1 
+    MJS =    0.5 
+    PBSWS =      1 
+    MJSWS =   0.33 
+    CJS = 0.0005 
+    CJSWS =  5e-10 
+    NJS =      1 
+    PBSWGS =      1 
+    MJSWGS =   0.33 
+    CJSWGS =  3e-10 
+    XTIS =      3 
+    JSD = 0.0001 
+    JSWD =  1e-11 
+    JSWGD =  1e-10 
+    PBD =      1 
+    MJD =    0.5 
+    PBSWD =      1 
+    MJSWD =   0.33 
+    CJD = 0.0005 
+    CJSWD =  5e-10 
+    NJD =      1 
+    PBSWGD =      1 
+    MJSWGD =   0.33 
+    CJSWGD =  5e-10 
+    XTID =      3 
+    LMLT =      1 
+    WMLT =      1 
+    LINT = 3.225e-09 
+    LL =      0 
+    LLC =      0 
+    LLN =      1 
+    LW =      0 
+    LWC =      0 
+    LWN =      1 
+    LWL =      0 
+    LWLC =      0 
+    LMIN =      0 
+    LMAX =      1 
+    WINT =  5e-09 
+    WL =      0 
+    WLC =      0 
+    WLN =      1 
+    WW =      0 
+    WWC =      0 
+    WWN =      1 
+    WWL =      0 
+    WWLC =      0 
+    WMIN =      0 
+    WMAX =      1 
+    NOIA = 6.25e+41 
+    NOIB = 3.125e+26 
+    NOIC = 8.75e+09 
+    EM = 4.1e+07 
+    EF =      1 
+    AF =      1 
+    KF =      0 
+    TRS =      0 
+    TRD =      0 
+ Model file: /home/centos/PDK/FreePDK45/ncsu_basekit/models/hspice/tran_models/models_ss/PMOS_VTL.inc
+ Model line:            3
+ Model Name: pmos_vtl  
+ BSIM4 Model (Level 54)
+    MOBMOD = 0
+    BINUNIT = 1
+    PARAMCHK = 1
+    CAPMOD = 2
+    DIOMOD = 1
+    RDSMOD = 0
+    TRNQSMOD = 0
+    ACNQSMOD = 0
+    RBODYMOD = 1
+    RGATEMOD = 1
+    PERMOD = 1
+    GEOMOD = 1
+    RGEOMOD = 0
+    FNOIMOD = 1
+    TNOIMOD = 0
+    IGCMOD = 1
+    IGBMOD = 1
+    STIMOD = 0
+    VERSION =      4 
+    TOXREF = 1.3e-09 
+    TOXE = 1.3e-09 
+    TOXP =  1e-09 
+    TOXM = 1.3e-09 
+    DTOX =  3e-10 
+    EPSROX =    3.9 
+    CDSC =      0 
+    CDSCB =      0 
+    CDSCD =      0 
+    CIT =      0 
+    NFACTOR =   2.22 
+    XJ = 1.98e-08 
+    VSAT = 6.9e+04 
+    A0 =      1 
+    AGS =  1e-20 
+    A1 =      0 
+    A2 =      1 
+    AT = 3.3e+04 
+    KETA = -0.047 
+    NSUB =  6e+16 
+    NDEP = 2.44e+18 
+    NSD =  2e+20 
+    NGATE =  2e+20 
+    GAMMA1 =      0 
+    GAMMA2 =      0 
+    VBX =      0 
+    VBM =     -3 
+    XT = 1.55e-07 
+    K1 =    0.4 
+    KT1 =  -0.11 
+    KT1L =      0 
+    KT2 =  0.022 
+    K2 =  -0.01 
+    K3 =      0 
+    K3B =      0 
+    LPE0 =      0 
+    LPEB =      0 
+    DVTP0 =  1e-11 
+    DVTP1 =   0.05 
+    W0 = 2.5e-06 
+    DVT0 =      1 
+    DVT1 =      2 
+    DVT2 = -0.032 
+    DVT0W =      0 
+    DVT1W =      0 
+    DVT2W =      0 
+    DROUT =   0.56 
+    DSUB =    0.1 
+    VTH0 = -0.3271 
+    EU =      1 
+    UA =  2e-09 
+    UA1 = 4.31e-09 
+    UB =  5e-19 
+    UB1 = 7.61e-18 
+    UC =      0 
+    UC1 = -5.6e-11 
+    U0 =   0.02 
+    UTE =   -1.5 
+    VOFF = -0.126 
+    VOFFL =      0 
+    MINV =   0.05 
+    FPROUT =    0.2 
+    PDITS =   0.08 
+    PDITSD =   0.23 
+    PDITSL = 2.3e+06 
+    DELTA =   0.01 
+    RDSW =    155 
+    RDSWMIN =      0 
+    RDWMIN =      0 
+    RSWMIN =      0 
+    RDW =     75 
+    RSW =     75 
+    PRWG =      0 
+    PRWB =      0 
+    PRT =      0 
+    ETA0 = 0.0055 
+    ETAB =      0 
+    PCLM =   0.12 
+    PDIBLC1 =  0.001 
+    PDIBLC2 =  0.001 
+    PDIBLCB = 3.4e-08 
+    PSCBE1 = 8.14e+08 
+    PSCBE2 = 9.58e-07 
+    PVAG =  1e-20 
+    WR =      1 
+    DWG =      0 
+    DWB =      0 
+    XW =      0 
+    XWREF =      0 
+    XL = -2e-08 
+    XLREF = -2e-08 
+    B0 =      0 
+    B1 =      0 
+    ALPHA0 =  0.074 
+    ALPHA1 =  0.005 
+    AGIDL = 0.0002 
+    BGIDL = 2.1e+09 
+    CGIDL = 0.0002 
+    PHIN =      0 
+    EGIDL =    0.8 
+    AIGC = 0.01069 
+    BIGC = 0.001261 
+    CIGC = 0.0008 
+    AIGSD = 0.01069 
+    BIGSD = 0.001261 
+    CIGSD = 0.0008 
+    AIGBACC =  0.012 
+    BIGBACC = 0.0028 
+    CIGBACC =  0.002 
+    AIGBINV =  0.014 
+    BIGBINV =  0.004 
+    CIGBINV =  0.004 
+    NIGC =      1 
+    NIGBINV =      3 
+    NIGBACC =      1 
+    NTOX =      1 
+    EIGBINV =    1.1 
+    PIGCD =      1 
+    POXEDGE =      1 
+    XRCRG1 =     12 
+    TNOIA =    1.5 
+    TNOIB =    3.5 
+    NTNOI =      1 
+    XRCRG2 =      5 
+    BETA0 =     30 
+    IJTHDFWD =   0.01 
+    IJTHSFWD =   0.01 
+    IJTHDREV =  0.001 
+    IJTHSREV =  0.001 
+    XJBVD =      1 
+    XJBVS =      1 
+    BVD =     10 
+    BVS =     10 
+    VFB =   0.55 
+    GBMIN =  1e-10 
+    RBDB =     15 
+    RBPB =      5 
+    RBSB =     15 
+    RBPS =     15 
+    RBPD =     15 
+    CGSL = 2.653e-10 
+    CGDL = 2.653e-10 
+    CKAPPAS =   0.03 
+    CKAPPAD =   0.03 
+    CF = 1.26e-10 
+    CLC =  1e-07 
+    CLE =    0.6 
+    DWC =  5e-09 
+    DLC = 3.225e-09 
+    DLCIG = 3.225e-09 
+    DWJ =      0 
+    VFBCV =     -1 
+    ACDE =      1 
+    MOIN =     15 
+    NOFF =    0.9 
+    VOFFCV =   0.02 
+    DMCG =      0 
+    DMCI =      0 
+    DMDG =      0 
+    DMCGT =      0 
+    XGW =      0 
+    XGL =      0 
+    RSHG =    0.4 
+    NGCON =      1 
+    TCJ =  0.001 
+    TPB =  0.005 
+    TCJSW =  0.001 
+    TPBSW =  0.005 
+    TCJSWG =  0.001 
+    TPBSWG =  0.005 
+    SK0 =      0 
+    SK1 =      0 
+    SK2 =      0 
+    SL =  2e-06 
+    SW =  2e-06 
+    K =      0 
+    TNOM =  300.1 
+    CGSO = 1.1e-10 
+    CGDO = 1.1e-10 
+    CGBO = 2.56e-11 
+    XPART =      0 
+    RSH =      5 
+    JSS = 0.0001 
+    JSWS =  1e-11 
+    JSWGS =  1e-10 
+    PBS =      1 
+    MJS =    0.5 
+    PBSWS =      1 
+    MJSWS =   0.33 
+    CJS = 0.0005 
+    CJSWS =  5e-10 
+    NJS =      1 
+    PBSWGS =      1 
+    MJSWGS =   0.33 
+    CJSWGS =  3e-10 
+    XTIS =      3 
+    JSD = 0.0001 
+    JSWD =  1e-11 
+    JSWGD =  1e-10 
+    PBD =      1 
+    MJD =    0.5 
+    PBSWD =      1 
+    MJSWD =   0.33 
+    CJD = 0.0005 
+    CJSWD =  5e-10 
+    NJD =      1 
+    PBSWGD =      1 
+    MJSWGD =   0.33 
+    CJSWGD =  5e-10 
+    XTID =      3 
+    LMLT =      1 
+    WMLT =      1 
+    LINT = 3.225e-09 
+    LL =      0 
+    LLC =      0 
+    LLN =      1 
+    LW =      0 
+    LWC =      0 
+    LWN =      1 
+    LWL =      0 
+    LWLC =      0 
+    LMIN =      0 
+    LMAX =      1 
+    WINT =  5e-09 
+    WL =      0 
+    WLC =      0 
+    WLN =      1 
+    WW =      0 
+    WWC =      0 
+    WWN =      1 
+    WWL =      0 
+    WWLC =      0 
+    WMIN =      0 
+    WMAX =      1 
+    NOIA = 6.188e+40 
+    NOIB = 1.5e+25 
+    NOIC = 8.75e+09 
+    EM = 4.1e+07 
+    EF =      1 
+    AF =      1 
+    KF =      0 
+    TRS =      0 
+    TRD =      0 
+  **warning** (halfadder_delay.sp:28) Both nodes of element vgnd are connected together; Line ignored.
+  **info** (halfadder_delay.sp:79) DC voltage reset to initial transient source value in source 0:vin1. new dc=0.0000D+00
+  **warning** (nmos_vtl:mm22 (halfadder.sp:20)) Warning:  Acde = 0.273012 may be too small in BSIM4 model with w=9e-08 l=5e-08.
+  **warning** (halfadder_delay.sp:51) Unable to find referenced node cin; Output variable ignored. Specify a valid node.
+             
+ Summary of Linear Res Distribution Info
+ ---------------------------------------
+ |Range          |Total     |Percent(%)|
+ |---------------+----------+----------|
+ |1e-03  ~  1e-02|1         |0.4505    |
+ |1e-02  ~  1e-01|19        |8.5586    |
+ |1e-01  ~  1e+00|84        |37.8378   |
+ |1e+00  ~  1e+03|118       |53.1532   |
+ ---------------------------------------
+              
+             
+ Summary of Linear Cap Distribution Info
+ ---------------------------------------
+ |Range          |Total     |Percent(%)|
+ |---------------+----------+----------|
+ |1e-19  ~  1e-18|73        |18.1141   |
+ |1e-18  ~  1e-17|207       |51.3648   |
+ |1e-17  ~  1e-16|120       |29.7767   |
+ |1e-16  ~  1e-15|1         |0.2481    |
+ |1e-13  ~  1e-12|2         |0.4963    |
+ ---------------------------------------
+              
+             
+ Summary of Detailed RC Type Statistics
+ -------------------------
+ |Element Type|Number    |
+ |------------+----------|
+ |Constant Res|222       |
+ |            |          |
+ |Constant Cap|403       |
+ -------------------------
+              
+  
+      
+
+Element variations(Local):   element              parameter
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 5         bypass  = 2.0000    
+  Opening plot unit= 15
+ file=worst_delay.pa0
+
+ **info** dc convergence successful at GMINDC ramping method 
+ ******  
+ *half adder
+
+ ****** operating point information tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is voltage   simulation time is     0.     
+     node    =voltage       node    =voltage       node    =voltage
+
+ + 0:a       =   0.       0:b       =   0.       0:cout    =  12.4271u
+ + 0:s       =  24.2495u  0:vdd!    = 700.0000m  1:n_a_c_28=  11.2184n
+ + 1:n_a_mm22=  12.3235n  1:n_a_mm23=  15.7800n  1:n_b_c_35=  11.9835n
+ + 1:n_b_mm26=  12.3235n  1:n_b_mm27=  15.7800n  1:n_cout_m=  12.4199u
+ + 1:n_cout_m=  12.4312u  1:n_gnd!_c=  11.7817n  1:n_gnd!_c=  13.9397n
+ + 1:n_gnd!_c=  13.3795n  1:n_gnd!_c=  14.7117n  1:n_gnd!_c=  13.9825n
+ + 1:n_gnd!_c=  13.7358n  1:n_gnd!_c=  14.0274n  1:n_gnd!_m=  24.4358n
+ + 1:n_gnd!_m=  32.5049n  1:n_gnd!_m=  15.5916n  1:n_gnd!_m=  23.5911n
+ + 1:n_gnd!_m=  13.2599n  1:n_gnd!_m=  26.2610n  1:n_gnd!_m=  29.5892n
+ + 1:n_gnd!_m=  21.3475n  1:n_net013=  13.3666u  1:n_net013=  13.3269u
+ + 1:n_net013=  13.3488u  1:n_net013=  13.3903u  1:n_net013=  13.3478u
+ + 1:n_net013=  13.3724u  1:n_net013=  13.3843u  1:n_net013=  13.3962u
+ + 1:n_net013=  13.3377u  1:n_net013=  13.3265u  1:n_net013=  13.4081u
+ + 1:n_net017= 699.9941m  1:n_net017= 699.9941m  1:n_net017= 699.9941m
+ + 1:n_net017= 699.9941m  1:n_net017= 699.9941m  1:n_net017= 699.9941m
+ + 1:n_net017= 699.9941m  1:n_net017= 699.9941m  1:n_net07_=  13.4024u
+ + 1:n_net07_=  13.4146u  1:n_net07_=  13.3744u  1:n_net07_=  13.4107u
+ + 1:n_net07_=  13.4208u  1:n_net07_=  13.3566u  1:n_net07_=  13.3445u
+ + 1:n_net07_=  13.4214u  1:n_net07_=  13.4094u  1:n_net09_= 699.9941m
+ + 1:n_net09_= 699.9941m  1:n_net09_= 699.9941m  1:n_net09_= 699.9941m
+ + 1:n_net09_= 699.9941m  1:n_net09_= 699.9941m  1:n_net09_= 699.9941m
+ + 1:n_net09_= 699.9941m  1:n_net14_= 699.9983m  1:n_net14_= 699.9983m
+ + 1:n_net14_= 699.9983m  1:n_net14_= 699.9983m  1:n_net14_= 699.9983m
+ + 1:n_net14_= 699.9983m  1:n_net14_= 699.9983m  1:n_net14_= 699.9983m
+ + 1:n_net14_= 699.9983m  1:n_net14_= 699.9983m  1:n_net14_= 699.9983m
+ + 1:n_net14_= 699.9983m  1:n_net14_= 699.9983m  1:n_net14_= 699.9983m
+ + 1:n_net14_= 699.9983m  1:n_net14_= 699.9983m  1:n_net14_= 699.9983m
+ + 1:n_net14_= 699.9983m  1:n_net14_= 699.9983m  1:n_net14_= 699.9983m
+ + 1:n_net22_= 699.9909m  1:n_net22_= 699.9909m  1:n_net22_= 699.9909m
+ + 1:n_net22_= 699.9909m  1:n_net22_= 699.9909m  1:n_net22_= 699.9909m
+ + 1:n_net22_= 699.9909m  1:n_net22_= 699.9909m  1:n_net22_= 699.9909m
+ + 1:n_net22_= 699.9909m  1:n_net22_= 699.9909m  1:n_net30_= 699.9878m
+ + 1:n_net30_= 699.9878m  1:n_net30_= 699.9878m  1:n_net30_= 699.9878m
+ + 1:n_net30_= 699.9878m  1:n_net30_= 699.9878m  1:n_net30_= 699.9878m
+ + 1:n_net30_= 699.9878m  1:n_s_c_23=  24.2576u  1:n_s_c_24=  24.2509u
+ + 1:n_s_mm17=  24.2616u  1:n_s_mm18=  24.2547u  1:n_s_mm19=  24.2346u
+ + 1:n_vdd!_c= 700.0000m  1:n_vdd!_c= 700.0000m  1:n_vdd!_c= 700.0000m
+ + 1:n_vdd!_c= 700.0000m  1:n_vdd!_c= 700.0000m  1:n_vdd!_c= 700.0000m
+ + 1:n_vdd!_c= 700.0000m  1:n_vdd!_m= 700.0000m  1:n_vdd!_m= 700.0000m
+ + 1:n_vdd!_m= 700.0000m  1:n_vdd!_m= 700.0000m  1:n_vdd!_m= 700.0000m
+ + 1:n_vdd!_m= 700.0000m  1:n_vdd!_m= 700.0000m  1:n_vdd!_m= 700.0000m
+ + 1:net055  =   7.1524u  1:net056  =  42.2228m  1:net20   = 550.2772m
+ + 1:net35   =  12.1977u  2:3       = 699.9941m  2:14      = 699.9941m
+ + 2:22      = 699.9941m  3:1       =  11.9978n  3:5       =  12.2491n
+ + 3:15      =  11.9835n  4:2       =  13.3748u  4:3       =  13.4034u
+ + 4:10      =  13.4037u  4:11      =  13.4151u  4:17      =  13.4032u
+ + 4:26      =  13.3570u  6:1       = 699.9983m  6:5       = 699.9983m
+ + 6:9       = 699.9983m  6:13      = 699.9983m  6:14      = 699.9983m
+ + 6:19      = 699.9983m  6:29      = 699.9983m  6:30      = 699.9983m
+ + 6:34      = 699.9983m  6:39      = 699.9983m  6:40      = 699.9983m
+ + 6:42      = 699.9983m  6:50      = 699.9983m  6:53      = 699.9983m
+ + 6:57      = 699.9983m  6:58      = 699.9983m  7:1       = 699.9909m
+ + 7:10      = 699.9909m  7:16      = 699.9909m  7:20      = 699.9909m
+ + 7:21      = 699.9909m  7:27      = 699.9909m  8:4       =  24.2498u
+ + 8:10      =  24.2514u  8:15      =  24.2511u  8:16      =  24.2584u
+ + 9:1       = 699.9878m  9:5       = 699.9878m  9:14      = 699.9878m
+ + 9:17      = 699.9878m  9:21      = 699.9878m  9:26      = 699.9878m
+ + 9:27      = 699.9878m  9:31      = 699.9878m 10:1       =  13.3908u
+ +10:9       =  13.3664u 10:16      =  13.3655u 10:17      =  13.3662u
+ +11:1       =  11.9978n 11:5       =  12.2491n 11:11      =  11.2184n
+ +12:29      =  11.6479n 12:34      =   9.7650n 12:40      =  14.5909n
+ +12:45      =  14.1647n 12:49      =  13.5167n 12:54      =  13.3795n
+ +12:58      =  14.3237n 12:63      =  13.9830n 12:67      =  16.0230n
+ +12:72      =  15.1549n 12:76      =  14.7426n 12:81      =  14.2209n
+ +12:85      =  14.9915n 12:89      =  14.2083n 12:94      =  11.0586n
+ +12:95      =  14.2279n 12:96      =  13.4243n 12:97      =  14.0108n
+ +12:98      =  15.2888n 12:99      =  14.3108n 12:100     =  14.4029n
+ +13:30      = 700.0000m 13:35      = 700.0000m 13:39      = 700.0000m
+ +13:44      = 700.0000m 13:48      = 700.0000m 13:53      = 700.0000m
+ +13:59      = 700.0000m 13:64      = 700.0000m 13:68      = 700.0000m
+ +13:73      = 700.0000m 13:77      = 700.0000m 13:82      = 700.0000m
+ +13:86      = 700.0000m 13:90      = 700.0000m 13:95      = 700.0000m
+ +13:96      = 700.0000m 13:97      = 700.0000m 13:98      = 700.0000m
+ +13:99      = 700.0000m 13:100     = 700.0000m 13:101     = 700.0000m
+ +14:1       = 699.9941m 14:18      = 699.9941m
+
+ ******
+ *half adder
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ delay_cout= 676.3454p  targ=   5.6263n   trig=   4.9500n
+ delay_s= 782.0824p  targ=   5.7321n   trig=   4.9500n
+
+          ***** job concluded
+ ******  
+ *half adder
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) CPU E5-2620 v4 @ 2.10GHz
+ cpu MHz	: 2099.998
+  
+ OS:
+ Linux version 3.10.0-1160.24.1.el7.x86_64 (mockbuild@kbuilder.bsys.centos.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) ) #1 SMP Thu Apr 8 19:51:47 UTC 2021
+
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :     4
+  Actual Threads Count       :     1
+
+
+  ****** Statistics of Ignored Elements ******
+  Voltage Sources :       1
+
+  ******  Circuit Statistics  ******
+  # nodes       =     329 # elements   =     654
+  # resistors   =     222 # capacitors =     403 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       3
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =      26 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.04           1         139
+  transient          0.33       20201        1176         385 rev=        50
+  readin             0.03
+  errchk             0.02
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        275.97 megabytes
+           total cpu time            0.44 seconds
+           total elapsed time        0.28 seconds
+           job started at     17:15:34 11/19/2022
+           job ended   at     17:15:35 11/19/2022
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        0.05(s)
